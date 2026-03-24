@@ -23,6 +23,25 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .header,
+    .section {
+      opacity: 0;
+      animation: fadeUp 0.4s ease forwards;
+    }
+
+    .header                { animation-delay: 0.05s; }
+    .section--bridge       { animation-delay: 0.10s; }
+    .section--socials      { animation-delay: 0.15s; }
+    .section--community    { animation-delay: 0.20s; }
+    .section--email        { animation-delay: 0.25s; }
+    .section--builders     { animation-delay: 0.20s; }
+    .section--token        { animation-delay: 0.25s; }
+
     :root {
       --aqua: #6CF9D8;
       --aqua-dim: #44c4a8;
@@ -757,7 +776,7 @@
       <div class="section-label">Bridge</div>
       <a class="bridge-card" href="https://app.across.to/bridge-and-swap?utm_source=app&utm_medium=links&utm_campaign=bridge20260324" target="_blank" rel="noopener">
         <div class="bridge-title">Bridge with Across &rarr;</div>
-        <div class="bridge-sub">Fast, cheap, and secure crosschain transfers</div>
+        <div class="bridge-sub">Transfer in seconds. No extra steps.</div>
       </a>
 
       <div class="route-grid">
@@ -974,5 +993,7 @@
       .catch(() => { btn.textContent = 'Try again'; btn.disabled = false; input.disabled = false; });
     }
   </script>
+  <script defer src="https://cdn.vercel-insights.com/v1/speed-insights/script.js"></script>
+  <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 </body>
 </html>
