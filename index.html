@@ -784,7 +784,7 @@
     <!-- Email Signup -->
     <div class="section section--email">
       <div class="section-label">Stay Updated</div>
-      <form class="email-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed!'; this.querySelector('input').disabled=true; this.querySelector('button').disabled=true;">
+      <form class="email-form" id="signup-form" onsubmit="handleSignup(event)">
         <input type="email" placeholder="Enter your email" required>
         <button type="submit">Subscribe</button>
       </form>
@@ -909,5 +909,25 @@
     </div>
 
   </div>
+
+  <script>
+    function handleSignup(e) {
+      e.preventDefault();
+      const form = document.getElementById('signup-form');
+      const input = form.querySelector('input');
+      const btn = form.querySelector('button');
+      const email = input.value;
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      input.disabled = true;
+      fetch('https://script.google.com/a/macros/umaproject.org/s/AKfycbwcWxS0E3EQcPvJ3VP6GJtH68AwY0mr5mv3uhxDFCg7yomO7jNY6d8YjLl_-jnOxfcdIA/exec', {
+        method: 'POST',
+        body: JSON.stringify({ email }),
+        headers: { 'Content-Type': 'application/json' }
+      })
+      .then(() => { btn.textContent = 'Subscribed!'; })
+      .catch(() => { btn.textContent = 'Try again'; btn.disabled = false; input.disabled = false; });
+    }
+  </script>
 </body>
 </html>
