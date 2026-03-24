@@ -118,9 +118,13 @@
       .section--builders  { grid-column: 3; grid-row: 1; }
       .section--token     { grid-column: 3; grid-row: 2 / 4; }
 
+      .section--bridge {
+        justify-content: space-between;
+      }
+
       .section--bridge .bridge-card {
-        padding: 12px 14px;
-        margin-bottom: 6px;
+        padding: 20px 18px;
+        margin-bottom: 0;
         border-radius: 12px;
         flex-shrink: 0;
       }
@@ -130,6 +134,7 @@
 
       .section--bridge .route-grid {
         gap: 6px;
+        flex: none;
       }
 
       .section--bridge .route-card {
