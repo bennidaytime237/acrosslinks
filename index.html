@@ -654,15 +654,15 @@
       align-items: center;
       justify-content: center;
       aspect-ratio: 1;
-      border: none;
+      background: var(--card);
+      border: 1.5px solid transparent;
       border-radius: 22%;
       text-decoration: none;
-      transition: transform 0.15s ease, filter 0.15s ease;
+      transition: transform 0.15s ease, border-color 0.15s ease;
     }
 
     .social-btn:hover {
       transform: scale(1.08);
-      filter: brightness(1.15);
     }
 
     .social-btn img {
@@ -671,16 +671,25 @@
       object-fit: contain;
     }
 
-    /* App icon brand colours */
-    .social--x         { background: #000000; }
-    .social--instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
-    .social--threads   { background: #000000; }
-    .social--facebook  { background: #1877F2; }
-    .social--linkedin  { background: #0A66C2; }
-    .social--tiktok    { background: #010101; }
-    .social--youtube   { background: #FF0000; }
-    .social--farcaster { background: #8A63D2; }
-    .social--hey       { background: #FF6B6B; }
+    /* Greyscale tiles with coloured outline */
+    .social--x         { border-color: #ffffff30; }
+    .social--x:hover   { border-color: #ffffff; }
+    .social--instagram { border-color: #E1306C50; }
+    .social--instagram:hover { border-color: #E1306C; }
+    .social--threads   { border-color: #ffffff30; }
+    .social--threads:hover { border-color: #ffffff; }
+    .social--facebook  { border-color: #1877F250; }
+    .social--facebook:hover { border-color: #1877F2; }
+    .social--linkedin  { border-color: #0A66C250; }
+    .social--linkedin:hover { border-color: #0A66C2; }
+    .social--tiktok    { border-color: #ffffff30; }
+    .social--tiktok:hover { border-color: #ffffff; }
+    .social--youtube   { border-color: #FF000050; }
+    .social--youtube:hover { border-color: #FF0000; }
+    .social--farcaster { border-color: #8A63D250; }
+    .social--farcaster:hover { border-color: #8A63D2; }
+    .social--hey       { border-color: #FF6B6B50; }
+    .social--hey:hover { border-color: #FF6B6B; }
 
     .social-btn .social-label {
       display: none;
