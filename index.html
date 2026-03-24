@@ -922,8 +922,9 @@
       input.disabled = true;
       fetch('https://script.google.com/macros/s/AKfycbxr16YGB1mw2QjhrktBEejxIovjD44JNppuQPVoiHJXzwj94g1mcBsN42-nW6jYy4pnmQ/exec', {
         method: 'POST',
+        mode: 'no-cors',
         body: JSON.stringify({ email }),
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 'Content-Type': 'text/plain' }
       })
       .then(() => { btn.textContent = 'Subscribed!'; })
       .catch(() => { btn.textContent = 'Try again'; btn.disabled = false; input.disabled = false; });
