@@ -184,19 +184,19 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 6px;
+        gap: 7px;
         text-decoration: none;
         color: var(--text);
-        padding: 10px 4px;
+        padding: 4px;
         border-radius: 12px;
-        transition: background 0.15s;
+        transition: opacity 0.15s;
       }
 
-      .token-tile:hover { background: rgba(255,255,255,0.05); }
+      .token-tile:hover { opacity: 0.8; }
 
       .token-tile .token-icon {
-        width: 46px;
-        height: 46px;
+        width: 100%;
+        aspect-ratio: 1;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -205,8 +205,8 @@
 
       .token-tile .token-icon svg,
       .token-tile .token-icon img {
-        width: 26px;
-        height: 26px;
+        width: 45%;
+        height: 45%;
         object-fit: contain;
       }
 
