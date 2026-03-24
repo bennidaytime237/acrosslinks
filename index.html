@@ -674,25 +674,18 @@
       flex-shrink: 0;
     }
 
-    /* Greyscale tiles with coloured outline */
-    .social--x         { border-color: #ffffff30; }
-    .social--x:hover   { border-color: #ffffff; }
-    .social--instagram { border-color: #E1306C50; }
-    .social--instagram:hover { border-color: #E1306C; }
-    .social--threads   { border-color: #ffffff30; }
-    .social--threads:hover { border-color: #ffffff; }
-    .social--facebook  { border-color: #1877F250; }
-    .social--facebook:hover { border-color: #1877F2; }
-    .social--linkedin  { border-color: #0A66C250; }
-    .social--linkedin:hover { border-color: #0A66C2; }
-    .social--tiktok    { border-color: #ffffff30; }
-    .social--tiktok:hover { border-color: #ffffff; }
-    .social--youtube   { border-color: #FF000050; }
-    .social--youtube:hover { border-color: #FF0000; }
-    .social--farcaster { border-color: #8A63D250; }
-    .social--farcaster:hover { border-color: #8A63D2; }
-    .social--hey       { border-color: #FF6B6B50; }
-    .social--hey:hover { border-color: #FF6B6B; }
+    /* Greyscale tiles — uniform grey border, coloured glow on hover */
+    .social-btn { border-color: var(--border); transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease; }
+
+    .social--x:hover         { box-shadow: 0 0 14px 3px #ffffffaa; border-color: #ffffff60; }
+    .social--instagram:hover { box-shadow: 0 0 14px 3px #E1306Caa; border-color: #E1306C60; }
+    .social--threads:hover   { box-shadow: 0 0 14px 3px #ffffffaa; border-color: #ffffff60; }
+    .social--facebook:hover  { box-shadow: 0 0 14px 3px #1877F2aa; border-color: #1877F260; }
+    .social--linkedin:hover  { box-shadow: 0 0 14px 3px #0A66C2aa; border-color: #0A66C260; }
+    .social--tiktok:hover    { box-shadow: 0 0 14px 3px #ffffffaa; border-color: #ffffff60; }
+    .social--youtube:hover   { box-shadow: 0 0 14px 3px #FF0000aa; border-color: #FF000060; }
+    .social--farcaster:hover { box-shadow: 0 0 14px 3px #8A63D2aa; border-color: #8A63D260; }
+    .social--hey:hover       { box-shadow: 0 0 14px 3px #FF6B6Baa; border-color: #FF6B6B60; }
 
     .social-btn .social-label {
       display: none;
