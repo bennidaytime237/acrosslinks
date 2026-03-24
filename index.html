@@ -171,55 +171,6 @@
         align-items: center;
       }
 
-      /* Token 2x2 circle grid */
-      .token-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
-        flex: 1;
-        min-height: 0;
-        align-content: stretch;
-      }
-
-      .token-tile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 6px;
-        text-decoration: none;
-        color: var(--text);
-        min-height: 0;
-        overflow: hidden;
-      }
-
-      .token-tile:hover { opacity: 0.8; }
-
-      .token-tile .token-icon {
-        width: 85%;
-        aspect-ratio: 1;
-        flex-shrink: 0;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .token-tile .token-icon svg,
-      .token-tile .token-icon img {
-        width: 55%;
-        height: 55%;
-        object-fit: contain;
-      }
-
-      .token-tile .token-label {
-        font-size: 11px;
-        font-weight: 500;
-        text-align: center;
-        color: var(--text-dim);
-        flex-shrink: 0;
-      }
-
       /* Community grid on desktop */
       .section--community .community-grid {
         gap: 4px;
@@ -908,33 +859,25 @@
     <div class="section section--token">
       <div class="section-label">Token</div>
 
-      <div class="token-grid">
-        <a class="token-tile" href="https://www.coingecko.com/en/coins/across-protocol" target="_blank" rel="noopener">
-          <span class="token-icon" style="background:#8DC63F;">
-            <img src="coingecko-logo.svg" alt="CoinGecko" style="width:60%;height:60%;object-fit:contain;">
-          </span>
-          <span class="token-label">CoinGecko</span>
+      <div class="community-grid">
+        <a class="community-tile" href="https://www.coingecko.com/en/coins/across-protocol" target="_blank" rel="noopener">
+          <span class="community-tile-icon"><img src="coingecko-logo.svg" alt="CoinGecko" style="width:100%;height:100%;object-fit:contain;"></span>
+          <span class="community-tile-label">CoinGecko</span>
         </a>
 
-        <a class="token-tile" href="https://snapshot.org/#/acrossprotocol.eth" target="_blank" rel="noopener">
-          <span class="token-icon" style="background:#222;">
-            <svg viewBox="0 0 24 24" fill="white"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
-          </span>
-          <span class="token-label">Snapshot</span>
+        <a class="community-tile" href="https://snapshot.org/#/acrossprotocol.eth" target="_blank" rel="noopener">
+          <span class="community-tile-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg></span>
+          <span class="community-tile-label">Snapshot</span>
         </a>
 
-        <a class="token-tile" href="https://forum.across.to" target="_blank" rel="noopener">
-          <span class="token-icon" style="background:#1a4f7a;">
-            <svg viewBox="0 0 24 24" fill="white"><path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"/></svg>
-          </span>
-          <span class="token-label">Forum</span>
+        <a class="community-tile" href="https://forum.across.to" target="_blank" rel="noopener">
+          <span class="community-tile-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-4 6V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1z"/></svg></span>
+          <span class="community-tile-label">Forum</span>
         </a>
 
-        <a class="token-tile" href="https://app.uniswap.org/swap?outputCurrency=0x44108f0223A3C3028F5Fe7AEC7f9bb2E66beF82F" target="_blank" rel="noopener">
-          <span class="token-icon" style="background:#FF007A;">
-            <img src="uniswap-logo.svg" alt="Uniswap" style="width:26px;height:26px;object-fit:contain;">
-          </span>
-          <span class="token-label">Buy $ACX</span>
+        <a class="community-tile" href="https://app.uniswap.org/swap?outputCurrency=0x44108f0223A3C3028F5Fe7AEC7f9bb2E66beF82F" target="_blank" rel="noopener">
+          <span class="community-tile-icon"><img src="uniswap-logo.svg" alt="Uniswap" style="width:100%;height:100%;object-fit:contain;filter:invert(1);"></span>
+          <span class="community-tile-label">Buy $ACX</span>
         </a>
       </div>
     </div>
