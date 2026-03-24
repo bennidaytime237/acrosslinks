@@ -346,10 +346,12 @@
       opacity: 0.85;
     }
 
-    /* Header */
-    .header {
-      text-align: center;
-      margin-bottom: 36px;
+    /* Header — mobile only */
+    @media (max-width: 1023px) {
+      .header {
+        text-align: center;
+        margin-bottom: 36px;
+      }
     }
 
     .logo {
