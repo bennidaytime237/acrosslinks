@@ -399,6 +399,15 @@
       overflow: hidden;
     }
 
+    .route-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
     .route-card:hover {
       transform: translateY(-2px);
       filter: brightness(1.1);
@@ -563,12 +572,10 @@
       </a>
 
       <div class="route-grid">
-        <a class="route-card route-card--hyperliquid" href="https://app.across.to?utm_source=linktree&utm_medium=links_page&utm_campaign=hyperliquid" target="_blank" rel="noopener">
-          <span class="route-badge">Hot</span>
-          <span class="route-logo">
-            <svg viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M337.5 110h125v580h-125z" fill="#0ED88F"/><path d="M187.5 210h100v380h-100z" fill="#0ED88F"/><path d="M512.5 210h100v380h-100z" fill="#0ED88F"/></svg>
-          </span>
-          <span class="label">Deposit to Hyperliquid</span>
+        <a class="route-card route-card--hyperliquid route-card--image" href="https://app.across.to?utm_source=linktree&utm_medium=links_page&utm_campaign=hyperliquid" target="_blank" rel="noopener">
+          <img src="hyperliquid-stations.svg" alt="" class="route-bg-img">
+          <span class="route-badge" style="position:relative;z-index:1;">Hot</span>
+          <span class="label" style="position:relative;z-index:1;">Deposit to Hyperliquid</span>
         </a>
 
         <a class="route-card route-card--hyperliquid" href="https://app.across.to?utm_source=linktree&utm_medium=links_page&utm_campaign=usdc_to_usdh" target="_blank" rel="noopener">
