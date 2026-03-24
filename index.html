@@ -175,8 +175,10 @@
       .token-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 6px;
+        gap: 8px;
         flex: 1;
+        min-height: 0;
+        align-content: stretch;
       }
 
       .token-tile {
@@ -184,23 +186,25 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 7px;
+        gap: 6px;
         text-decoration: none;
         color: var(--text);
-        padding: 4px;
-        border-radius: 12px;
-        transition: opacity 0.15s;
+        min-height: 0;
+        overflow: hidden;
       }
 
       .token-tile:hover { opacity: 0.8; }
 
       .token-tile .token-icon {
         width: 100%;
-        aspect-ratio: 1;
+        flex: 1;
+        min-height: 0;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+        aspect-ratio: 1;
+        max-width: 100%;
       }
 
       .token-tile .token-icon svg,
@@ -215,6 +219,7 @@
         font-weight: 500;
         text-align: center;
         color: var(--text-dim);
+        flex-shrink: 0;
       }
 
       /* Community grid on desktop */
@@ -907,8 +912,8 @@
 
       <div class="token-grid">
         <a class="token-tile" href="https://www.coingecko.com/en/coins/across-protocol" target="_blank" rel="noopener">
-          <span class="token-icon" style="background:#3d7f3d;">
-            <svg viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H11.5v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.65c.1 1.7 1.36 2.66 2.85 2.97V19h1.72v-1.67c1.52-.29 2.72-1.16 2.72-2.74 0-2.21-1.9-2.97-3.63-3.45z"/></svg>
+          <span class="token-icon" style="background:#8DC63F;">
+            <img src="coingecko-logo.svg" alt="CoinGecko" style="width:60%;height:60%;object-fit:contain;">
           </span>
           <span class="token-label">CoinGecko</span>
         </a>
