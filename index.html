@@ -58,6 +58,19 @@
       --border: #4a4b52;
     }
 
+    [data-theme="light"] {
+      --aqua: #05C9AD;
+      --aqua-dim: #04A890;
+      --aqua-glow: rgba(5, 201, 173, 0.12);
+      --bg: #FFFFFF;
+      --card: #F0F1F4;
+      --card-mid: #E3E5EB;
+      --card-hover: #E8EAF0;
+      --text: #1C1D22;
+      --text-dim: #6B7280;
+      --border: #D0D3DC;
+    }
+
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg);
@@ -103,6 +116,7 @@
         text-align: left;
         flex-shrink: 0;
       }
+      .theme-toggle { margin-left: auto; }
 
       .header .logo { width: 30px; height: 30px; margin-bottom: 0; }
       .header h1 { font-size: 30px; line-height: 1; margin-bottom: 0; color: var(--aqua); }
@@ -463,12 +477,72 @@
       opacity: 0.85;
     }
 
+    /* Light mode: email form overrides */
+    [data-theme="light"] .email-form input {
+      background: #FFFFFF;
+    }
+    [data-theme="light"] .email-form input:focus {
+      background: #FFFFFF;
+    }
+    [data-theme="light"] .email-form input:-webkit-autofill,
+    [data-theme="light"] .email-form input:-webkit-autofill:hover,
+    [data-theme="light"] .email-form input:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset;
+    }
+    [data-theme="light"] .email-form button {
+      background: #D4F5EE;
+      color: #038C76;
+    }
+
+    /* Light mode: bridge home card */
+    [data-theme="light"] .bridge-card--home {
+      background: var(--card-mid);
+      border-color: var(--border);
+    }
+    [data-theme="light"] .bridge-card.bridge-card--home .bridge-title {
+      color: var(--text);
+    }
+    [data-theme="light"] .bridge-card.bridge-card--home .bridge-sub {
+      color: var(--text-dim);
+    }
+    [data-theme="light"] .bridge-card--home:hover {
+      background: var(--card-hover);
+    }
+
+    /* Theme toggle button */
+    .theme-toggle {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text-dim);
+      cursor: pointer;
+      padding: 6px 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.2s, color 0.2s;
+      flex-shrink: 0;
+    }
+    .theme-toggle:hover {
+      color: var(--text);
+      border-color: var(--aqua-dim);
+    }
+    .theme-toggle svg {
+      width: 15px;
+      height: 15px;
+      display: block;
+    }
+    .icon-moon { display: none; }
+    [data-theme="light"] .icon-sun  { display: none; }
+    [data-theme="light"] .icon-moon { display: block; }
+
     .header {
       display: flex;
       flex-direction: row;
       align-items: center;
       gap: 12px;
       text-align: left;
+      position: relative;
     }
 
     .logo {
@@ -497,6 +571,12 @@
         justify-content: center;
         min-height: 72px;
         margin-bottom: 12px;
+      }
+      .theme-toggle {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
       }
       .section {
         margin-bottom: 12px;
@@ -868,6 +948,20 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M506.368 382L382 506.368L797.39 921.757C807.969 894.318 824.325 868.594 846.46 846.46C868.594 824.325 894.318 807.969 921.757 797.39L506.368 382ZM797.39 1078.24L382 1493.63L506.368 1618L921.757 1202.61C894.318 1192.03 868.594 1175.67 846.46 1153.54C824.325 1131.41 807.969 1105.68 797.39 1078.24ZM1153.54 1153.54C1175.67 1131.41 1192.03 1105.68 1202.61 1078.24L1618 1493.63L1493.63 1618L1078.24 1202.61C1105.68 1192.03 1131.41 1175.67 1153.54 1153.54ZM1618 506.368L1202.61 921.757C1192.03 894.318 1175.67 868.594 1153.54 846.46C1131.41 824.325 1105.68 807.969 1078.24 797.39L1493.63 382L1618 506.368Z" fill="#2C2F33"/>
         </svg>
       </a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+        <!-- Sun: shown in dark mode -->
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <!-- Moon: shown in light mode -->
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
     </div>
 
     <div class="sections-grid">
@@ -1101,6 +1195,25 @@
       .then(() => { btn.textContent = 'Subscribed!'; })
       .catch(() => { btn.textContent = 'Try again'; btn.disabled = false; input.disabled = false; });
     }
+  </script>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    })();
+    document.addEventListener('DOMContentLoaded', function() {
+      const btn = document.getElementById('themeToggle');
+      btn.addEventListener('click', function() {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        if (isLight) {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    });
   </script>
   <script defer src="https://cdn.vercel-insights.com/v1/speed-insights/script.js"></script>
   <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
