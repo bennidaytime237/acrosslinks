@@ -842,19 +842,22 @@
       color: #4d8aff;
     }
 
-    .route-card .route-label {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 6px 8px;
+    .route-item {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .route-item .route-card {
+      flex: 1;
+    }
+
+    .route-label {
       font-size: 10px;
-      font-weight: 600;
+      font-weight: 500;
       text-align: center;
-      color: rgba(255,255,255,0.85);
-      background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%);
+      color: var(--text-dim);
       line-height: 1.3;
-      z-index: 1;
     }
 
     .route-card .label {
@@ -991,25 +994,33 @@
       <div class="section section--routes">
         <div class="section-label">Popular Routes</div>
         <div class="route-grid">
-          <a class="route-card route-card--hyperliquid route-card--image" href="https://app.across.to/hypercore?utm_source=app&utm_medium=links&utm_campaign=hyperliquid20260324" target="_blank" rel="noopener">
-            <img src="hyperliquid-stations.svg" alt="Deposit to Hyperliquid" class="route-bg-img">
+          <div class="route-item">
+            <a class="route-card route-card--hyperliquid route-card--image" href="https://app.across.to/hypercore?utm_source=app&utm_medium=links&utm_campaign=hyperliquid20260324" target="_blank" rel="noopener">
+              <img src="hyperliquid-stations.svg" alt="Deposit to Hyperliquid" class="route-bg-img">
+            </a>
             <span class="route-label">Deposit to Hyperliquid</span>
-          </a>
+          </div>
 
-          <a class="route-card route-card--hyperliquid route-card--image" href="https://app.across.to/hypercore?utm_source=app&utm_medium=links&utm_campaign=usdh20260324" target="_blank" rel="noopener">
-            <img src="usdh-tile.svg" alt="1:1 USDC to USDH" class="route-bg-img">
+          <div class="route-item">
+            <a class="route-card route-card--hyperliquid route-card--image" href="https://app.across.to/hypercore?utm_source=app&utm_medium=links&utm_campaign=usdh20260324" target="_blank" rel="noopener">
+              <img src="usdh-tile.svg" alt="1:1 USDC to USDH" class="route-bg-img">
+            </a>
             <span class="route-label">1:1 USDC to USDH</span>
-          </a>
+          </div>
 
-          <a class="route-card route-card--solana route-card--image" href="https://app.across.to/solana?utm_source=app&utm_medium=links&utm_campaign=solana20260324" target="_blank" rel="noopener">
-            <img src="solana-tile.svg" alt="Solana Bridging" class="route-bg-img">
+          <div class="route-item">
+            <a class="route-card route-card--solana route-card--image" href="https://app.across.to/solana?utm_source=app&utm_medium=links&utm_campaign=solana20260324" target="_blank" rel="noopener">
+              <img src="solana-tile.svg" alt="Solana Bridging" class="route-bg-img">
+            </a>
             <span class="route-label">Solana Bridging</span>
-          </a>
+          </div>
 
-          <a class="route-card route-card--base route-card--image" href="https://app.across.to/base?utm_source=app&utm_medium=links&utm_campaign=base20260324" target="_blank" rel="noopener">
-            <img src="base-tile.svg" alt="Bridge to Base" class="route-bg-img">
+          <div class="route-item">
+            <a class="route-card route-card--base route-card--image" href="https://app.across.to/base?utm_source=app&utm_medium=links&utm_campaign=base20260326" target="_blank" rel="noopener">
+              <img src="base-tile.svg" alt="Bridge to Base" class="route-bg-img">
+            </a>
             <span class="route-label">Bridge to Base</span>
-          </a>
+          </div>
         </div>
       </div>
 
