@@ -403,15 +403,18 @@
     .email-form {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 0;
+      border: 1px solid rgba(10, 233, 199, 0.35);
+      border-radius: 8px;
+      overflow: hidden;
     }
 
     .email-form input {
       flex: 1;
       background: #2D2E33;
-      border: 1px solid var(--border);
-      border-radius: 8px 8px 0 0;
-      border-bottom: none;
+      border: none;
+      border-bottom: 1px solid rgba(10, 233, 199, 0.2);
+      border-radius: 0;
       padding: 10px 16px;
       color: var(--text);
       font-family: inherit;
@@ -425,8 +428,12 @@
     }
 
     .email-form input:focus {
-      border-color: var(--aqua-dim);
       background: #2D2E33;
+      outline: none;
+    }
+
+    .email-form:focus-within {
+      border-color: rgba(10, 233, 199, 0.65);
     }
 
     .email-form input:-webkit-autofill,
