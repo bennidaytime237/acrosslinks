@@ -51,6 +51,7 @@
       --orange: #F97A6C;
       --bg: #2D2E33;
       --card: #34353D;
+      --card-mid: #444951;
       --card-hover: #44454c;
       --text: #e0f8f0;
       --text-dim: #9ca3af;
@@ -498,6 +499,16 @@
       color: var(--aqua-dim);
       margin-bottom: 12px;
       padding-left: 4px;
+    }
+
+    /* Section base — applies to both mobile and desktop */
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
     }
 
     /* Builders condensed on mobile */
