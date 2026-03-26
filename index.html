@@ -290,6 +290,7 @@
 
       .section--email .email-form {
         flex: 3;
+        gap: 0;
       }
 
       .section--email .blog-btn {
@@ -405,17 +406,12 @@
       gap: 8px;
     }
 
-    .email-form {
-      flex-direction: row;
-      gap: 8px;
-      align-items: stretch;
-    }
-
     .email-form input {
       flex: 1;
       background: #2D2E33;
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: 8px 8px 0 0;
+      border-bottom: none;
       padding: 10px 16px;
       color: var(--text);
       font-family: inherit;
@@ -433,10 +429,11 @@
     }
 
     .email-form button {
+      width: 100%;
       background: #2F383B;
       color: #06E7C7;
       border: none;
-      border-radius: 8px;
+      border-radius: 0 0 8px 8px;
       padding: 10px 18px;
       font-family: inherit;
       font-size: 13px;
