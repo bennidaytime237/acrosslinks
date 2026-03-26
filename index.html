@@ -35,7 +35,8 @@
     }
 
     .header                { animation-delay: 0.05s; }
-    .section--bridge       { animation-delay: 0.10s; }
+    .section--bridge-cta   { animation-delay: 0.10s; }
+    .section--routes       { animation-delay: 0.15s; }
     .section--socials      { animation-delay: 0.15s; }
     .section--community    { animation-delay: 0.20s; }
     .section--email        { animation-delay: 0.25s; }
@@ -138,45 +139,61 @@
       }
 
       /* Grid positions: socials+community+email left, bridge center, builders+token right */
-      .section--socials   { grid-column: 1; grid-row: 1; }
-      .section--community { grid-column: 1; grid-row: 2; }
-      .section--email     { grid-column: 1; grid-row: 3; }
-      .section--bridge    { grid-column: 2; grid-row: 1 / 4; }
-      .section--builders  { grid-column: 3; grid-row: 1 / 3; }
-      .section--token     { grid-column: 3; grid-row: 3; }
+      .section--socials    { grid-column: 1; grid-row: 1; }
+      .section--community  { grid-column: 1; grid-row: 2; }
+      .section--email      { grid-column: 1; grid-row: 3; }
+      .section--bridge-cta { grid-column: 2; grid-row: 1; }
+      .section--routes     { grid-column: 2; grid-row: 2 / 4; }
+      .section--builders   { grid-column: 3; grid-row: 1 / 3; }
+      .section--token      { grid-column: 3; grid-row: 3; }
 
-      .section--bridge {
-        justify-content: space-between;
+      .section--bridge-cta {
+        justify-content: center;
       }
 
-      .section--bridge .bridge-cta-row {
+      .section--bridge-cta .bridge-cta-row {
         margin-bottom: 0;
-        flex-shrink: 0;
+        width: 100%;
       }
 
-      .section--bridge .bridge-card {
+      .section--bridge-cta .bridge-card {
         padding: 28px 20px;
         border-radius: 12px;
       }
 
-      .section--bridge .bridge-title { font-size: 15px; }
-      .section--bridge .bridge-sub { font-size: 11px; }
-
-      .section--bridge .route-grid {
-        gap: 6px;
-        flex: none;
+      .section--routes {
+        justify-content: space-between;
       }
 
-      .section--bridge .route-card {
+      .section--routes .route-grid {
+        gap: 6px;
+        flex: 1;
+      }
+
+      .section--routes .route-card {
         padding: 8px 6px;
         border-radius: 10px;
         aspect-ratio: 1;
       }
 
-      .section--bridge .route-card .label { font-size: 10px; }
-      .section--bridge .route-logo { width: 28px; height: 28px; }
-      .section--bridge .route-logo img, .section--bridge .route-logo svg { width: 28px; height: 28px; }
-      .section--bridge .route-badge { font-size: 9px; padding: 2px 6px; }
+      .section--bridge-cta .bridge-title { font-size: 15px; }
+      .section--bridge-cta .bridge-sub { font-size: 11px; }
+
+      .section--routes .route-grid {
+        gap: 6px;
+        flex: none;
+      }
+
+      .section--routes .route-card {
+        padding: 8px 6px;
+        border-radius: 10px;
+        aspect-ratio: 1;
+      }
+
+      .section--routes .route-card .label { font-size: 10px; }
+      .section--routes .route-logo { width: 28px; height: 28px; }
+      .section--routes .route-logo img, .section--routes .route-logo svg { width: 28px; height: 28px; }
+      .section--routes .route-badge { font-size: 9px; padding: 2px 6px; }
 
       /* Community, Builders, Token tiles */
       .section .link-card {
@@ -809,8 +826,7 @@
     <div class="sections-grid">
 
     <!-- Bridge CTA -->
-    <div class="section section--bridge">
-      <div class="section-label">Bridge</div>
+    <div class="section section--bridge-cta">
       <div class="bridge-cta-row">
         <a class="bridge-card bridge-card--home" href="https://across.to" target="_blank" rel="noopener">
           <div class="bridge-title">Home &nearr;</div>
@@ -821,7 +837,11 @@
           <div class="bridge-sub">Transfer in seconds. No extra steps.</div>
         </a>
       </div>
+    </div>
 
+    <!-- Popular Routes -->
+    <div class="section section--routes">
+      <div class="section-label">Popular Routes</div>
       <div class="route-grid">
         <a class="route-card route-card--hyperliquid route-card--image" href="https://app.across.to/hypercore?utm_source=app&utm_medium=links&utm_campaign=hyperliquid20260324" target="_blank" rel="noopener">
           <img src="hyperliquid-stations.svg" alt="Deposit to Hyperliquid" class="route-bg-img">
