@@ -142,14 +142,17 @@
       .section--socials    { grid-column: 1; grid-row: 1; }
       .section--community  { grid-column: 1; grid-row: 2; }
       .section--email      { grid-column: 1; grid-row: 3; }
-      .section--bridge-cta { grid-column: 2; grid-row: 1; }
-      .section--routes     { grid-column: 2; grid-row: 2 / 4; }
+      .bridge-column       { grid-column: 2; grid-row: 1 / 4; display: flex; flex-direction: column; gap: 4px; }
       .section--builders   { grid-column: 3; grid-row: 1 / 3; }
       .section--token      { grid-column: 3; grid-row: 3; }
 
       .section--bridge-cta {
         justify-content: center;
-        align-self: start;
+        flex-shrink: 0;
+      }
+
+      .section--routes {
+        flex: 1;
       }
 
       .section--bridge-cta .bridge-cta-row {
@@ -815,41 +818,46 @@
 
     <div class="sections-grid">
 
-    <!-- Bridge CTA -->
-    <div class="section section--bridge-cta">
-      <div class="section-label">Across</div>
-      <div class="bridge-cta-row">
-        <a class="bridge-card bridge-card--home" href="https://across.to" target="_blank" rel="noopener">
-          <div class="bridge-title">Home &nearr;</div>
-          <div class="bridge-sub">across.to</div>
-        </a>
-        <a class="bridge-card bridge-card--bridge" href="https://app.across.to/bridge-and-swap?utm_source=app&utm_medium=links&utm_campaign=bridge20260324" target="_blank" rel="noopener">
-          <div class="bridge-title">Bridge &rarr;</div>
-          <div class="bridge-sub">Transfer in seconds. No extra steps.</div>
-        </a>
+    <!-- Bridge column wrapper -->
+    <div class="bridge-column">
+
+      <!-- Bridge CTA -->
+      <div class="section section--bridge-cta">
+        <div class="section-label">Across</div>
+        <div class="bridge-cta-row">
+          <a class="bridge-card bridge-card--home" href="https://across.to" target="_blank" rel="noopener">
+            <div class="bridge-title">Home &nearr;</div>
+            <div class="bridge-sub">across.to</div>
+          </a>
+          <a class="bridge-card bridge-card--bridge" href="https://app.across.to/bridge-and-swap?utm_source=app&utm_medium=links&utm_campaign=bridge20260324" target="_blank" rel="noopener">
+            <div class="bridge-title">Bridge &rarr;</div>
+            <div class="bridge-sub">Transfer in seconds. No extra steps.</div>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- Popular Routes -->
-    <div class="section section--routes">
-      <div class="section-label">Popular Routes</div>
-      <div class="route-grid">
-        <a class="route-card route-card--hyperliquid route-card--image" href="https://app.across.to/hypercore?utm_source=app&utm_medium=links&utm_campaign=hyperliquid20260324" target="_blank" rel="noopener">
-          <img src="hyperliquid-stations.svg" alt="Deposit to Hyperliquid" class="route-bg-img">
-        </a>
+      <!-- Popular Routes -->
+      <div class="section section--routes">
+        <div class="section-label">Popular Routes</div>
+        <div class="route-grid">
+          <a class="route-card route-card--hyperliquid route-card--image" href="https://app.across.to/hypercore?utm_source=app&utm_medium=links&utm_campaign=hyperliquid20260324" target="_blank" rel="noopener">
+            <img src="hyperliquid-stations.svg" alt="Deposit to Hyperliquid" class="route-bg-img">
+          </a>
 
-        <a class="route-card route-card--hyperliquid route-card--image" href="https://app.across.to/hypercore?utm_source=app&utm_medium=links&utm_campaign=usdh20260324" target="_blank" rel="noopener">
-          <img src="usdh-tile.svg" alt="1:1 USDC to USDH" class="route-bg-img">
-        </a>
+          <a class="route-card route-card--hyperliquid route-card--image" href="https://app.across.to/hypercore?utm_source=app&utm_medium=links&utm_campaign=usdh20260324" target="_blank" rel="noopener">
+            <img src="usdh-tile.svg" alt="1:1 USDC to USDH" class="route-bg-img">
+          </a>
 
-        <a class="route-card route-card--solana route-card--image" href="https://app.across.to/solana?utm_source=app&utm_medium=links&utm_campaign=solana20260324" target="_blank" rel="noopener">
-          <img src="solana-tile.svg" alt="Bridge to Solana" class="route-bg-img">
-        </a>
+          <a class="route-card route-card--solana route-card--image" href="https://app.across.to/solana?utm_source=app&utm_medium=links&utm_campaign=solana20260324" target="_blank" rel="noopener">
+            <img src="solana-tile.svg" alt="Bridge to Solana" class="route-bg-img">
+          </a>
 
-        <a class="route-card route-card--bnb route-card--image" href="https://app.across.to/bnbsmartchain?utm_source=app&utm_medium=links&utm_campaign=bnb" target="_blank" rel="noopener">
-          <img src="bnb-tile.svg" alt="Bridge to BNB Chain" class="route-bg-img">
-        </a>
+          <a class="route-card route-card--bnb route-card--image" href="https://app.across.to/bnbsmartchain?utm_source=app&utm_medium=links&utm_campaign=bnb" target="_blank" rel="noopener">
+            <img src="bnb-tile.svg" alt="Bridge to BNB Chain" class="route-bg-img">
+          </a>
+        </div>
       </div>
+
     </div>
 
     <!-- Socials -->
