@@ -426,6 +426,15 @@
 
     .email-form input:focus {
       border-color: var(--aqua-dim);
+      background: #2D2E33;
+    }
+
+    .email-form input:-webkit-autofill,
+    .email-form input:-webkit-autofill:hover,
+    .email-form input:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 1000px #2D2E33 inset;
+      -webkit-text-fill-color: var(--text);
+      caret-color: var(--text);
     }
 
     .email-form button {
