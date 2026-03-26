@@ -509,6 +509,12 @@
       background: var(--card-hover);
     }
 
+    /* Social icons: invert white → dark grey in light mode */
+    [data-theme="light"] .social-btn img,
+    [data-theme="light"] .social-btn svg {
+      filter: invert(1) brightness(0.25);
+    }
+
     /* Theme toggle button */
     .theme-toggle {
       background: var(--card);
