@@ -149,11 +149,14 @@
         justify-content: space-between;
       }
 
+      .section--bridge .bridge-cta-row {
+        margin-bottom: 0;
+        flex-shrink: 0;
+      }
+
       .section--bridge .bridge-card {
         padding: 28px 20px;
-        margin-bottom: 0;
         border-radius: 12px;
-        flex-shrink: 0;
       }
 
       .section--bridge .bridge-title { font-size: 15px; }
@@ -550,6 +553,13 @@
       color: var(--aqua);
     }
 
+    /* Bridge CTA row */
+    .bridge-cta-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
     /* Featured bridge card */
     .bridge-card {
       display: block;
@@ -560,10 +570,31 @@
       text-decoration: none;
       color: var(--bg);
       transition: all 0.2s ease;
-      margin-bottom: 12px;
+      flex: 1;
     }
 
-    .bridge-card:hover {
+    .bridge-card--home {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .bridge-card--home .bridge-title {
+      color: var(--text);
+    }
+
+    .bridge-card--home .bridge-sub {
+      color: var(--text-dim);
+    }
+
+    .bridge-card--home:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.1);
+      border-color: var(--aqua-dim);
+      box-shadow: 0 6px 24px rgba(108, 249, 216, 0.15);
+    }
+
+    .bridge-card--bridge:hover {
       transform: translateY(-2px);
       background: #8ffce6;
       box-shadow: 0 6px 24px rgba(108, 249, 216, 0.35);
@@ -780,10 +811,16 @@
     <!-- Bridge CTA -->
     <div class="section section--bridge">
       <div class="section-label">Bridge</div>
-      <a class="bridge-card" href="https://app.across.to/bridge-and-swap?utm_source=app&utm_medium=links&utm_campaign=bridge20260324" target="_blank" rel="noopener">
-        <div class="bridge-title">Bridge with Across &rarr;</div>
-        <div class="bridge-sub">Transfer in seconds. No extra steps.</div>
-      </a>
+      <div class="bridge-cta-row">
+        <a class="bridge-card bridge-card--home" href="https://across.to" target="_blank" rel="noopener">
+          <div class="bridge-title">Home &nearr;</div>
+          <div class="bridge-sub">across.to</div>
+        </a>
+        <a class="bridge-card bridge-card--bridge" href="https://app.across.to/bridge-and-swap?utm_source=app&utm_medium=links&utm_campaign=bridge20260324" target="_blank" rel="noopener">
+          <div class="bridge-title">Bridge &rarr;</div>
+          <div class="bridge-sub">Transfer in seconds. No extra steps.</div>
+        </a>
+      </div>
 
       <div class="route-grid">
         <a class="route-card route-card--hyperliquid route-card--image" href="https://app.across.to/hypercore?utm_source=app&utm_medium=links&utm_campaign=hyperliquid20260324" target="_blank" rel="noopener">
