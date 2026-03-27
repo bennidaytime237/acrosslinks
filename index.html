@@ -166,21 +166,30 @@
 
       .section--bridge-cta {
         justify-content: center;
-        flex-shrink: 0;
+        flex: 1;
       }
 
       .section--routes {
-        flex: 1;
+        flex: none;
+      }
+
+      .section--bridge-cta {
+        justify-content: flex-start;
       }
 
       .section--bridge-cta .bridge-cta-row {
         margin-bottom: 0;
         width: 100%;
+        flex: 1;
+        align-items: stretch;
       }
 
       .section--bridge-cta .bridge-card {
         padding: 14px 20px;
         border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
 
       .section--routes {
@@ -190,7 +199,6 @@
 
       .section--routes .route-grid {
         gap: 4px;
-        flex: 1;
       }
 
       .section--routes .route-card {
